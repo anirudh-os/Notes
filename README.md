@@ -10,7 +10,7 @@ Welcome to my notes repository! Here you'll find notes on various topics that I'
   
 ## Structure
 
-The repository is organized into folders for each subject/course. Each folder contains sub-folders for difeerent topics and those sub-folders contain Markdown files with notes and 
+The repository is organized into folders for each subject/course. Each folder contains sub-folders for different topics and those sub-folders contain Markdown files with notes and 
 possibly other related resources/assets.
 
 Feel free to explore and use these notes for your own learning!
