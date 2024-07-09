@@ -19,7 +19,7 @@ Feel free to explore and use these notes for your own learning!
 
 - Clone this repository to your local machine:
   ```bash
-  git clone https://github.com/your-username/your-repo.git
+  git clone https://github.com/anirudh-os/Notes.git
   ```
 - Navigate to the topic folder you're interested in and explore the notes.
 
