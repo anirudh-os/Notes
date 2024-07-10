@@ -37,14 +37,15 @@ It changes the display layout to grid.
 
 It sets the width of columns to 1fr[^1] and 2fr respectively
 
-[^1]:fr = fraction ratio. The width of the columns will be in 1:2 ratio.
-
 >grid-template-rows: 1fr 1fr
 
-It sets the width of both columns to 1fr
+It sets the width of both columns[^2] to 1fr
 
 >gap: 10px
 
 It is the gap between 2 consecutive rows or columns
 
 Practice: [here](https://appbrewery.github.io/grid-vs-flexbox)
+
+[^1]:fr = fraction ratio. The width of the columns will be in 1:2 ratio.
+[^2]: Instead of repeating same sizes for all columns, we can use the repeat function. ```repeat(no_columns, size)```.
