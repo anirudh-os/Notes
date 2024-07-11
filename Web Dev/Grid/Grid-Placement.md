@@ -6,6 +6,7 @@
 * The smallest units, so made, are called **_grid cells_**
 * The lines seperating these cells are called **_grid lines_**
     * These lines can be controlled by the *gap* property
+    * The color and other properties of the grid lines cannot be changed
 
 
 ## Grid Column Property
