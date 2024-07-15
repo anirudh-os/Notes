@@ -3,7 +3,7 @@
 ## Week-1
 
 1. Day 1-2: Introduction to Rust
-- - [ ] Read Chapters 1-2 of "The Rust Programming Language" (Rust Book).
+- - [x] Read Chapters 1-2 of "The Rust Programming Language" (Rust Book).
   * [x] Set up your development environment (install Rust and an editor/IDE).
 
 2. Day 3-4: Basics of Rust
