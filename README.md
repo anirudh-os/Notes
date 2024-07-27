@@ -7,6 +7,10 @@ Welcome to my notes repository! Here you'll find notes on various topics that I'
 - [NANDtoTETRIS](./NANDtoTETRIS)
 - [Rust-Lang](./Rust-Lang)
 - [Web Dev](./Web%20Dev)
+- [DSA](./DSA/)
+- [Ethical Hacking](./Ethical%20Hacking/)
+- [German](./German/)
+- [Missing Semester(MIT)](./Missing%20Semester/)
   
 ## Structure
 
