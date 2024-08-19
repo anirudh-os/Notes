@@ -28,5 +28,5 @@ It is a port often left by the hardware/software developers for debugging and di
 
 ### Sofware Vulnerabilities
 
-* Sometimes the software manufacturer's have a websote where the vulnerabilities of their product are posted to request patches or fixes
+* Sometimes the software manufacturer's have a website where the vulnerabilities of their product are posted to request patches or fixes
 * Newbie hackers (also called `script kiddies`) use these for practice
