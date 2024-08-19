@@ -6,7 +6,7 @@
 
 - It has seven layers
 
-- Te communicative functions are partitioned into these `hierarchial` set of layers
+- The communicative functions are partitioned into these `hierarchial` set of layers
 
 - It is created in order to have a design in which changes made in one layer do not affect the other layers
 
