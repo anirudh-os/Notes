@@ -11,7 +11,7 @@ println("Hello, $name!)
 println("Hello, " + name + "!")
 ```
 
-- `print` functions prints the output on the same line without moving the cursor to the nsext line
+- `print` functions prints the output on the same line without moving the cursor to the next line
 - `println` does the opposite
 
 > A very important thing to note here is that the kotlin does not need semicolons to end a statement
