@@ -29,4 +29,4 @@ Feel free to explore and use these notes for your own learning!
 
 ## Contribution
 
-This is a private repo. Contributions are not allowed.
+This repo is for personal use. Anyone can access the material but contributions are not allowed.
