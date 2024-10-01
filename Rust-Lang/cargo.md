@@ -1,6 +1,6 @@
 # Cargo
 
-Cargo is the native package manager for rust. It is used to create, build and manage projets and their dependencies.
+Cargo is the native package manager for rust. It is used to create, build and manage projects and their dependencies.
 
 ## Creating packages with Cargo
 

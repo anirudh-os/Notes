@@ -540,6 +540,112 @@ fun main() {
 
 [^3]: In Kotlin (and Java), `StringBuffer` is a class used for creating and manipulating strings in a mutable way. It provides an efficient way to handle string operations like concatenation and modifications compared to immutable String objects.
 
+8. Retrieve Collections Parts
+
+These functions allow you to retrieve parts or slices of a collection.
+
+- take(n): Returns the first n elements of a collection.
+```kotlin
+val numbers = listOf(1, 2, 3, 4, 5)
+val firstThree = numbers.take(3)
+// Result: [1, 2, 3]
+```
+
+- drop(n): Returns a list with the first n elements removed.
+
+```kotlin
+val numbers = listOf(1, 2, 3, 4, 5)
+val dropFirstTwo = numbers.drop(2)
+// Result: [3, 4, 5]
+```
+
+- slice(indices): Returns a list containing elements from the original list at the specified indices.
+
+```kotlin
+val numbers = listOf(1, 2, 3, 4, 5)
+val sliced = numbers.slice(1..3)
+// Result: [2, 3, 4]
+```
+
+9. Retrieve Single Elements
+
+These functions are used to retrieve individual elements from a collection.
+
+- first(): Returns the first element of a collection. Throws NoSuchElementException if the collection is empty.
+
+```kotlin
+val numbers = listOf(1, 2, 3)
+val firstNumber = numbers.first()
+// Result: 1
+```
+
+- last(): Returns the last element of a collection. Throws NoSuchElementException if the collection is empty.
+
+```kotlin
+val numbers = listOf(1, 2, 3)
+val lastNumber = numbers.last()
+// Result: 3
+```
+- single(): Returns the only element in the collection. Throws NoSuchElementException if the collection is empty or has more than one element.
+
+```kotlin
+val singleNumber = listOf(42).single()
+// Result: 42
+```
+- find(predicate): Finds the first element that matches the given predicate or returns null if no such element is found.
+
+```kotlin
+val numbers = listOf(1, 2, 3)
+val foundNumber = numbers.find { it > 2 }
+// Result: 3
+```
+
+10. Comparable and Comparator
+
+These are used to compare elements for sorting and other operations.
+
+- sorted: Returns a list of elements sorted according to their natural order.
+
+```kotlin
+val numbers = listOf(5, 3, 1, 4, 2)
+val sortedNumbers = numbers.sorted()
+// Result: [1, 2, 3, 4, 5]
+```
+
+- sortedBy: Returns a list of elements sorted according to a selector function.
+
+```kotlin
+data class Person(val name: String, val age: Int)
+val people = listOf(Person("Alice", 30), Person("Bob", 25))
+val sortedByAge = people.sortedBy { it.age }
+// Result: [Person(name=Bob, age=25), Person(name=Alice, age=30)]
+```
+
+- sortedWith: Returns a list of elements sorted according to a custom comparator.
+
+```kotlin
+val numbers = listOf(5, 3, 1, 4, 2)
+val sortedWithComparator = numbers.sortedWith(compareBy { -it })
+// Result: [5, 4, 3, 2, 1]
+```
+
+- compareBy: Creates a comparator based on the given selector functions.
+
+```kotlin
+val people = listOf(Person("Alice", 30), Person("Bob", 25))
+val comparator = compareBy<Person> { it.age }
+val sortedByComparator = people.sortedWith(comparator)
+// Result: [Person(name=Bob, age=25), Person(name=Alice, age=30)]
+```
+
+- thenBy and thenComparing: Allow chaining of sorting criteria.
+
+```kotlin
+val people = listOf(Person("Alice", 30), Person("Bob", 25), Person("Charlie", 30))
+val sorted = people.sortedWith(compareBy<Person> { it.age }.thenBy { it.name })
+// Result: [Person(name=Bob, age=25), Person(name=Alice, age=30), Person(name=Charlie, age=30)]
+```
+
 ## Collection-Specific Functions
 
 ### List Functions:

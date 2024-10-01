@@ -33,7 +33,7 @@
     let x = 10; // 
     ```
 * Differences between `mut` and shadowing:
-    * Shadowing doesn't make the varible mutable, instead it creates a new variable of same name
+    * Shadowing doesn't make the variable mutable, instead it creates a new variable of same name
     * Values can be changed using shadowing but the variable still remains immutable
     * Values can be changed using `mut` too, but the new value should be of the same data type
         ```rust
@@ -69,26 +69,67 @@ There are 4 primary scalar types:
     * They are the numbers without fractional part
     * They can be signed or unsigned
 
-        | Length  | Signed | Unsigned |
-        |---------|--------|----------|
-        | 8-bit   | i8     | u8       |
-        | 16-bit  | i16    | u16      |
-        | 32-bit  | i32    | u32      |
-        | 64-bit  | i64    | u64      |
-        | 128-bit | i128   | u128     |
-        | arch    | isize  | usize    |
+		| Length  | Signed | Unsigned |
+		|---------|--------|----------|
+		| 8-bit   | i8     | u8       |
+		| 16-bit  | i16    | u16      |
+		| 32-bit  | i32    | u32      |
+		| 64-bit  | i64    | u64      |
+		| 128-bit | i128   | u128     |
+		| arch    | isize  | usize    |
     * The isize and usize types depend on the architecture of the computer your program is running on, which is denoted in the table as “arch”( 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.)
     * The integers can be represented as following:
 
-        | Number Literals  | Example     |
-        |------------------|-------------|
-        | Decimal          | 98_222      |
-        | Hexadecimal      | 0xff        |
-        | Octal            | 0o77        |
-        | Binary           | 0b1111_0000 |
-        | Byte (u8 only)   | b'A'        |
+		| Number Literals  | Example     |
+		|------------------|-------------|
+		| Decimal          | 98_222      |
+		| Hexadecimal      | 0xff        |
+		| Octal            | 0o77        |
+		| Binary           | 0b1111_0000 |
+		| Byte (u8 only)   | b'A'        |
 
+###  [Compound Types](https://doc.rust-lang.org/book/ch03-02-data-types.html#compound-types)
 
+*Compound types* can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.
+
+1. [The Tuple Type](https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type)
+
+- A *tuple* is a general way of grouping together a number of values with a variety of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+	
+	```rust
+	fn main() { let tup: (i32, f64, u8) = (500, 6.4, 1); }
+	```
+
+```rust
+	fn main() {
+	    let tup = (500, 6.4, 1);
+	
+	    let (x, y, z) = tup;
+	
+	    println!("The value of y is: {y}");
+	}
+```
+
+```rust
+fn main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+
+    let five_hundred = x.0;
+
+    let six_point_four = x.1;
+
+    let one = x.2;
+}
+```
+
+2.  [The Array Type](https://doc.rust-lang.org/book/ch03-02-data-types.html#the-array-type)
+
+- Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array must have the same type. Unlike arrays in some other languages, arrays in Rust have a fixed length.
+- You can also initialize an array to contain the same value for each element by specifying the initial value, followed by a semicolon, and then the length of the array in square brackets, as shown here:
+
+```rust
+let a = [3; 5];
+```
 
 
 

@@ -7,7 +7,7 @@
   * [x] Set up your development environment (install Rust and an editor/IDE).
 
 2. Day 3-4: Basics of Rust
-* * [ ] Read Chapter 3 (Common Programming Concepts) of Rust Book.
+* - [ ] Read Chapter 3 (Common Programming Concepts) of Rust Book.
   * [ ] Complete Rustlings exercises 1-5 (Basic Syntax).
 
  3. Day 5-7: Ownership and Lifetimes

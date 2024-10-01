@@ -10,13 +10,13 @@ There are two types of arrays:
 
 ## One Dimensional Arrays
 
-The arrays array elements here are accesed through one single dimension.
+The arrays array elements here are accessed through one single dimension.
 
 `ele_addr = arr_addr + ele_size * (i - first_index)`
 
 ## Two Dimensional Arrays
 
-The arrays array elements here are accesed through two dimensions.
+The arrays array elements here are accessed through two dimensions.
 
 `ele_addr = arr_addr + ele_size * ((row_no - first_row) * no_of_ele_row + (col_no - first_col))`
 
