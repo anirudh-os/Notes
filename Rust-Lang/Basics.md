@@ -122,6 +122,21 @@ fn main() {
 }
 ```
 
+> `println!("{:#?}", tup); // Pretty-Print` 
+```bash
+(
+    96,
+    "MASK",
+    9696.9696,
+)
+```
+
+>`println!("{:?}", tup); // Debug-Print`
+```bash
+(96, "MASK", 9696.9696)
+```
+> Works for all collection types (structs too)
+
 2.  [The Array Type](https://doc.rust-lang.org/book/ch03-02-data-types.html#the-array-type)
 
 - Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array must have the same type. Unlike arrays in some other languages, arrays in Rust have a fixed length.
@@ -130,8 +145,52 @@ fn main() {
 ```rust
 let a = [3; 5];
 ```
-
-
-
-
 [^1]: Even though rust is a statically typed language, it can still infer the type of data. That is why the compiler did not show an error in the statement `let x = 5`.
+
+3. The String Type
+
+```rust
+let mut st1 = String::new();
+st1.push('A');
+st1.push_str(" Person");
+for word in st1.split_whitespace() {
+    println!("{}", word);
+}
+let st2 = st1.replace("A", "Another");
+println!("The new string is: \n{}", st2);
+```
+
+```rust
+let st3 = String::from("a d e  a e r f e t g r t g ");
+let mut v1:Vec<char> = st3.chars().collect();
+v1.sort();
+v1.dedup();
+for char in v1 {
+    println!("{}", char);
+}
+```
+
+```rust
+let str4 = "random String";
+let mut str5 = str4.to_string();
+println!("{}", str5); //random String
+```
+
+```rust
+let byte_arr = str5.as_bytes();
+println!("{:?}", byte_arr); // [114, 97, 110, 100, 111, 109, 32, 83, 116, 114, 105, 110, 103]
+```
+
+```rust
+let str6 = &str5[0..6]; // slicing
+println!("{}", str6); // random
+```
+
+- The length of the string can be found using `len()` function
+
+```rust
+str5.clear(); // Deletes all values in a string
+println!("{}", str5); // Empty String
+```
+
+- [More About string types](https://www.youtube.com/watch?v=CpvzeyzgQdw)
