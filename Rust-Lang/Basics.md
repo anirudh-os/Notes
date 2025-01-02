@@ -193,4 +193,37 @@ str5.clear(); // Deletes all values in a string
 println!("{}", str5); // Empty String
 ```
 
+```rust
+let str6 = String::from("A pack");
+let str7 = String::from(" of Wolves");
+let str8 = str6 + &str7;
+println!("str8 = {}", str8);
+println!("str6 = {}", str6);
+```
+
+```bash
+$ cargo run
+   Compiling rust_tutorial v0.1.0 (rust/rust_tutorial)
+error[E0382]: borrow of moved value: `str6`
+  --> src/main.rs:14:27
+   |
+10 |     let str6 = String::from("A pack");
+   |         ---- move occurs because `str6` has type `String`, which does not implement the `Copy` trait
+11 |     let str7 = String::from(" of Wolves");
+12 |     let str8 = str6 + &str7;
+   |                ---- value moved here
+13 |     println!("str8 = {}", str8);
+14 |     println!("str6 = {}", str6);
+   |                           ^^^^ value borrowed here after move
+   |
+   = note: this error originates in the macro `$crate::format_args_nl` which comes from the expansion of the macro `println` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider cloning the value if the performance cost is acceptable
+   |
+12 |     let str8 = str6.clone() + &str7;
+   |                    ++++++++
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `rust_tutorial` (bin "rust_tutorial") due to 1 previous error
+```
+
 - [More About string types](https://www.youtube.com/watch?v=CpvzeyzgQdw)
