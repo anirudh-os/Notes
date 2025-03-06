@@ -55,7 +55,7 @@
 
 - Its an optional layer
 
-- We can handle tasks like adding extra encryption or correct codes
+- We can handle tasks like adding extra encryption or correct the codes
 
 ### Application Layer
 
