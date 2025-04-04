@@ -15,15 +15,3 @@ The repository is organized into folders for each subject/course. Each folder co
 possibly other related resources/assets.
 
 Feel free to explore and use these notes for your own learning!
-
-## How to Use
-
-- Clone this repository to your local machine:
-  ```bash
-  git clone https://github.com/anirudh-os/Notes.git
-  ```
-- Navigate to the topic folder you're interested in and explore the notes.
-
-## Contribution
-
-This repo is for personal use. Anyone can access the material but contributions are not allowed.
