@@ -2,7 +2,7 @@
 
 1. Every value in a rust program has a variable as its `owner`
 2. For every value there can only be one owner
-3. The variable will lose its `ownership` of the value if it goes out of `scope`. This is because rust calls a function called `drop` which deallocates any memory from teh heap given to a variable when it goes out of scope.
+3. The variable will lose its `ownership` of the value if it goes out of `scope`. This is because rust calls a function called `drop` which deallocates any memory from the heap given to a variable when it goes out of scope.
     - The drop function is implicitly called when a variable goes out of scope, and this is primarily for values that are allocated on the heap. Rust automatically calls drop to clean up resources when the owner goes out of scope. This is part of Rust's ownership system that ensures no memory leaks.
 4. There exists something called `move` in rust which will move the ownership of a value from one variable to the other
     ```rust
