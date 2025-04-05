@@ -37,3 +37,11 @@ This would give- `v.remove(i) cannot borrow v as mutable`
 | `list.iter()` | `&i32` | Yes (`.copied()` to get `i32`) |
 | `list.into_iter()` | `i32` (owned) | No |
 | `list.clone().into_iter()` | owned `i32` from fresh Vec | No |
+
+6. Modules and crates:
+
+| Keyword | Purpose |
+| --- | --- |
+| `mod menu;` | Declares a **module** (i.e., tells the compiler to include `menu.rs`) |
+| `use crate::menu::something;` | **Imports** items from another module so you can use them directly |
+| `crate::menu::something` | Fully qualified **path** to an item defined in another module |
